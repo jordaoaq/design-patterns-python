@@ -1,4 +1,4 @@
-import Factory.livros as livros
+from . import livros
 
 class FabricaDeLivros:
     # Atributo de classe (compartilhado por todas as instâncias, mas acessado via cls)

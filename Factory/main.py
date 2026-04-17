@@ -1,6 +1,6 @@
 from datetime import date
-from Factory.fabrica import FabricaDeLivros
-from Factory.livros import TipoDeLivro
+from .fabrica import FabricaDeLivros
+from .livros import TipoDeLivro
 
 def main():
     # Chamada direta via classe usando @classmethod
@@ -15,27 +15,27 @@ def main():
     )
     
     meu_livro_fisico = FabricaDeLivros.criar_livro(
-        TipoDeLivro.FISICO,
-        "O Cortiço",
-        "Aluísio Azevedo",
-        date(1890, 1, 1),
-        "300 páginas"
+        tipo_livro=TipoDeLivro.FISICO,
+        titulo="O Cortiço",
+        autor="Aluísio Azevedo",
+        data_publicacao=date(1890, 1, 1),
+        tamanho="300 páginas"
     )
 
     meu_audiolivro = FabricaDeLivros.criar_livro(
-        TipoDeLivro.AUDIOLIVRO,
-        "Duna",
-        "Frank Herbert",
-        date(1965, 8, 1),
-        "10 horas"
+        tipo_livro=TipoDeLivro.AUDIOLIVRO,
+        titulo="Duna",
+        autor="Frank Herbert",
+        data_publicacao=date(1965, 8, 1),
+        tamanho="10 horas"
     )
 
     meu_manga = FabricaDeLivros.criar_livro(
-        TipoDeLivro.MANGA,
-        "One Piece",
-        "Eiichiro Oda",
-        date(1997, 7, 22),
-        "Volume 1"
+        tipo_livro=TipoDeLivro.MANGA,
+        titulo="One Piece",
+        autor="Eiichiro Oda",
+        data_publicacao=date(1997, 7, 22),
+        tamanho="Volume 1"
     )
 
     print("-" * 30)
@@ -48,8 +48,8 @@ def main():
     print(f"Tipo 3: {meu_audiolivro.obter_tipo()}")
     print(f"Detalhes 3: {meu_audiolivro.obter_detalhes()}")
     print("-" * 30)
-    print(f"Tipo 3: {meu_manga.obter_tipo()}")
-    print(f"Detalhes 3: {meu_manga.obter_detalhes()}")
+    print(f"Tipo 4: {meu_manga.obter_tipo()}")
+    print(f"Detalhes 4: {meu_manga.obter_detalhes()}")
     print("-" * 30)
 
 if __name__ == "__main__":

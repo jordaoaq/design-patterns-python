@@ -1,12 +1,3 @@
-# Neste arquivo, você deve definir as classes para os tipos de livros que sua fábrica pode criar.
-# Pense neles como os "produtos" concretos.
-
-# 1. Crie uma classe base (ou uma interface) chamada `Livro`.
-#    - Ela pode ter um método `obter_tipo()` que as subclasses irão implementar.
-
-# 2. Crie classes concretas que herdam de `Livro`.
-#    - Por exemplo, uma classe `Ebook`. O método `obter_tipo()` dela deve retornar "Ebook".
-#    - Crie outra classe `LivroFisico`. O método `obter_tipo()` dela deve retornar "Livro Físico".
 from enum import Enum, auto
 from datetime import date
 from abc import ABC, abstractmethod
